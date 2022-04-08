@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="body_wrap">
+      <h1 id="title">Guess a Number!</h1>
+      <button id="play">Play</button>
+      <div id="result_wrap">
+        <h2 id="result" style="display: none">&nbsp&nbsp&nbspYou Win! 🎉</h2>
+        <button id="retry" style="display: none">Play again</button>
+      </div>
+      <div id="gameForm" class="game_wrap" style="display: none">
+        <div id="input_wrap">
+          <h3 id="Down">DOWN<span style="opacity: 0">👇</span></h3>
+          <form id="guessForm">
+            <input id="guessInput" type="number" />
+            <button id="enter" type="submit">GO</button>
+          </form>
+          <h3 id="Up"><span style="opacity: 0">👆</span>UP</h3>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
