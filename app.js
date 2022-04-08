@@ -23,7 +23,6 @@ const playHandler = () => {
 const submitHandler = (event) => {
   event.preventDefault();
   let inputContainer = Number(input.value);
-  console.log(number);
   input.value = "";
 
   if (inputContainer === number) {
