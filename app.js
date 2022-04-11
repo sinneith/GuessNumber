@@ -1,27 +1,30 @@
-const playBtn = document.getElementById("play");
+const title = document.getElementById("title");
+const easyMode = document.getElementById("easy");
+const hardMode = document.getElementById("hard");
 const guessForm = document.getElementById("guessForm");
-const enterBtn = document.getElementById("enter");
+const gameForm = document.getElementById("gameForm");
 const input = document.getElementById("guessInput");
 const up = document.getElementById("Up");
 const upSpan = document.querySelector("#Up span");
 const down = document.getElementById("Down");
 const downSpan = document.querySelector("#Down span");
-const retryBtn = document.getElementById("retry");
 const result = document.getElementById("result");
-const gameForm = document.getElementById("gameForm");
-const title = document.getElementById("title");
+const retryBtn = document.getElementById("retry");
 
-const randomNumber = () => {
-  return (number = Math.round(Math.random() * 100));
-};
-
-const playHandler = () => {
-  playBtn.style.display = "none";
+const playHandler = (event) => {
+  easyMode.style.display = "none";
+  hardMode.style.display = "none";
   gameForm.style.display = "block";
+  if (event.target.innerText === "Easy") {
+    return (number = Math.round(Math.random() * 100));
+  } else {
+    return (number = Math.round(Math.random() * 10000));
+  }
 };
 
 const submitHandler = (event) => {
   event.preventDefault();
+  console.log(number);
   let inputContainer = Number(input.value);
   input.value = "";
 
@@ -47,16 +50,16 @@ const retryHandler = () => {
   result.style.display = "none";
   retryBtn.style.display = "none";
   title.style.display = "block";
-  gameForm.style.display = "block";
+  easyMode.style.display = "inline-block";
+  hardMode.style.display = "inline-block";
+
   up.style.color = "gray";
   down.style.color = "gray";
   upSpan.style.opacity = "0";
   downSpan.style.opacity = "0";
-  randomNumber();
-  playHandler();
 };
 
-randomNumber();
-playBtn.addEventListener("click", playHandler);
+easyMode.addEventListener("click", playHandler);
+hardMode.addEventListener("click", playHandler);
 guessForm.addEventListener("submit", submitHandler);
 retryBtn.addEventListener("click", retryHandler);

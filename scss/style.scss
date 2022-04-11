@@ -13,6 +13,14 @@ body {
   height: 100vh;
   background-color: lightsalmon;
   position: relative;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
 
 .body_wrap {
@@ -38,16 +46,19 @@ body {
     font-size: 8rem;
     color: lightsalmon;
   }
-  #play {
+  #easy,
+  #hard {
     background-color: lightsalmon;
     color: white;
-    font-weight: bold;
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 2rem 5rem;
-    border-radius: 3.5rem;
+    border-radius: 6rem;
     position: relative;
     top: 40%;
     transform: translate(0, -40%);
+    &:not(#hard) {
+      margin-right: 5rem;
+    }
   }
   #gameForm {
     font-size: 4rem;
