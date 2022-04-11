@@ -116,40 +116,43 @@ body input[type=number] {
   margin: 10rem auto;
 }
 
-@media (max-width: 1023px) {
+/* @media (max-width: ) {
+} */
+/* @media (max-width: 1023px) {
   .body_wrap {
-    width: 80rem;
-  }
-  .body_wrap #gameForm {
-    padding: 12rem 0;
-  }
-  .body_wrap #result {
-    font-size: 6.5rem;
+    width: 80%;
+    #gameForm {
+      padding: 12rem 0;
+    }
+    #result {
+      font-size: 6.5rem;
+    }
   }
 }
 @media (max-width: 768px) {
   .body_wrap {
-    width: 60rem;
+    width: 80%;
     padding: 10rem 5rem;
-  }
-  .body_wrap #input_wrap {
-    justify-content: space-evenly;
-  }
-  .body_wrap #input_wrap input {
-    font-size: 3.5rem;
-  }
-  .body_wrap #input_wrap h3 {
-    font-size: 3rem;
-  }
-  .body_wrap #guessForm input {
-    width: 15rem;
-  }
-  .body_wrap #result {
-    font-size: 5rem;
-  }
-  .body_wrap #retry {
-    font-size: 3rem;
+    #input_wrap {
+      justify-content: space-evenly;
+      input {
+        font-size: 3.5rem;
+      }
+      h3 {
+        font-size: 3rem;
+      }
+    }
+    #guessForm input {
+      width: 15rem;
+    }
+    #result {
+      font-size: 5rem;
+    }
+    #retry {
+      font-size: 3rem;
+    }
   }
 }
+ */
 
 /*# sourceMappingURL=style.css.map */
