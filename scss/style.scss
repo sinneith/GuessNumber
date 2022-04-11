@@ -9,10 +9,9 @@ html {
   font-size: 62.5%;
 }
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: lightsalmon;
-  background-color: black;
   position: relative;
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -23,61 +22,69 @@ body {
     -moz-appearance: textfield;
   }
 }
-
 .body_wrap {
-  text-align: center;
+  background-color: white;
+  width: 80%;
+  height: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  color: gray;
-  width: 110rem;
-  height: 70rem;
-  border-radius: 5rem;
-  padding: 10rem;
+  border-radius: 2%;
+  padding: 10%;
   box-sizing: border-box;
-  button {
+  .contents_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn_wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    #easy {
+      margin-right: 1%;
+    }
+    #hard {
+      margin-left: 1%;
+    }
+  }
+  .button {
     all: unset;
+    /*     display: inline-block;
+    margin: 0 auto; */
     cursor: pointer;
-  }
-  h1 {
-    font-family: "Rubik Puddles", cursive;
-    text-align: center;
-    font-size: 8rem;
-    color: lightsalmon;
-  }
-  #easy,
-  #hard {
+    font-size: 4rem;
     background-color: lightsalmon;
     color: white;
-    font-size: 4rem;
     padding: 2rem 5rem;
     border-radius: 6rem;
-    position: relative;
-    top: 40%;
-    transform: translate(0, -40%);
-    &:not(#hard) {
-      margin-right: 5rem;
+  }
+}
+#title {
+  font-family: "Rubik Puddles", cursive;
+  text-align: center;
+  font-size: 10rem;
+  color: lightsalmon;
+}
+#gameForm {
+  padding: 15% 0;
+}
+#input_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  h3 {
+    font-weight: normal;
+    font-size: 3.5rem;
+    span {
+      float: right;
     }
   }
-  #gameForm {
-    font-size: 4rem;
-    padding: 18rem 0;
-  }
-  #input_wrap {
-    display: flex;
-    justify-content: space-between;
-    h3 {
-      font-weight: normal;
-      font-size: 3.5rem;
-      span {
-        float: right;
-      }
-    }
-    #Up span {
-      float: left;
-    }
+  #Up span {
+    float: left;
   }
   #guessForm {
     input {
@@ -87,69 +94,162 @@ body {
       width: 20rem;
       padding-bottom: 1.5rem;
       color: black;
+      font-size: 3rem;
     }
     button {
+      margin-left: 0.5rem;
       font-size: 3rem;
-      background-color: lightsalmon;
-      color: white;
-      padding: 1rem;
-      border-radius: 0.8rem;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+    }
+  }
+}
+#result_wrap {
+  #result {
+    font-size: 8rem;
+  }
+  #retry {
+    margin: 20% auto;
+  }
+}
+
+//meadia query
+@media (max-width: 1280px) {
+  #input_wrap {
+    h3 {
+      font-size: 3rem;
+    }
+    #guessForm {
+      input {
+        width: 12rem;
+        font-size: 3.5rem;
+        padding-bottom: 1rem;
+      }
+      button {
+        margin-left: 0.5rem;
+        font-size: 2.2rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  #title {
+    font-size: 7rem;
+  }
+  #input_wrap {
+    h3 {
+      font-size: 2.5rem;
+    }
+    #guessForm {
+      input {
+        width: 7rem;
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+      }
+      button {
+        margin-left: 0.5rem;
+        font-size: 2rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  #title {
+    font-size: 6rem;
+  }
+  .body_wrap .button {
+    font-size: 2.8rem;
+    padding: 1rem 3rem;
+  }
+  #input_wrap {
+    h3 {
+      font-size: 2rem;
+    }
+    #guessForm {
+      input {
+        width: 6rem;
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+      }
+      button {
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
     }
   }
   #result_wrap {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-  }
-  #result {
-    font-size: 8rem;
-    color: black;
-  }
-  #retry {
-    font-size: 4rem;
-    background-color: lightsalmon;
-    color: white;
-    padding: 2rem 3rem;
-    border-radius: 6rem;
-    margin: 10rem auto;
-  }
-}
-/* @media (max-width: ) {
-} */
-/* @media (max-width: 1023px) {
-  .body_wrap {
-    width: 80%;
-    #gameForm {
-      padding: 12rem 0;
-    }
     #result {
-      font-size: 6.5rem;
-    }
-  }
-}
-@media (max-width: 768px) {
-  .body_wrap {
-    width: 80%;
-    padding: 10rem 5rem;
-    #input_wrap {
-      justify-content: space-evenly;
-      input {
-        font-size: 3.5rem;
-      }
-      h3 {
-        font-size: 3rem;
-      }
-    }
-    #guessForm input {
-      width: 15rem;
-    }
-    #result {
-      font-size: 5rem;
+      font-size: 2.7rem;
     }
     #retry {
-      font-size: 3rem;
+      font-size: 2.2rem;
+      padding: 1rem 2rem;
     }
   }
 }
- */
+@media (max-width: 393px) {
+  #title {
+    font-size: 5rem;
+  }
+  .body_wrap .button {
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+  }
+  #input_wrap {
+    h3 {
+      font-size: 1.5rem;
+    }
+    #guessForm {
+      input {
+        width: 6rem;
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+      }
+      button {
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+  #result_wrap {
+    #result {
+      margin: 0 auto;
+      font-size: 2.4rem;
+    }
+    #retry {
+      font-size: 1.8rem;
+      padding: 1rem 2rem;
+    }
+  }
+}
+@media (max-width: 280px) {
+  #title {
+    font-size: 4rem;
+  }
+  .body_wrap .button {
+    font-size: 2rem;
+    padding: 0.8rem 2rem;
+  }
+  #input_wrap {
+    h3 {
+      font-size: 1.2rem;
+    }
+    #guessForm {
+      input {
+        width: 4rem;
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+      }
+      button {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        padding: 0.8rem;
+        border-radius: 0.6rem;
+      }
+    }
+  }
+}

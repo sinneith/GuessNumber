@@ -11,10 +11,9 @@ html {
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: lightsalmon;
-  background-color: black;
   position: relative;
 }
 body input::-webkit-outer-spin-button,
@@ -27,133 +26,219 @@ body input[type=number] {
 }
 
 .body_wrap {
-  text-align: center;
+  background-color: white;
+  width: 80%;
+  height: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  color: gray;
-  width: 110rem;
-  height: 70rem;
-  border-radius: 5rem;
-  padding: 10rem;
+  border-radius: 2%;
+  padding: 10%;
   box-sizing: border-box;
 }
-.body_wrap button {
+.body_wrap .contents_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.body_wrap .btn_wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.body_wrap .btn_wrap #easy {
+  margin-right: 1%;
+}
+.body_wrap .btn_wrap #hard {
+  margin-left: 1%;
+}
+.body_wrap .button {
   all: unset;
+  /*     display: inline-block;
+  margin: 0 auto; */
   cursor: pointer;
-}
-.body_wrap h1 {
-  font-family: "Rubik Puddles", cursive;
-  text-align: center;
-  font-size: 8rem;
-  color: lightsalmon;
-}
-.body_wrap #easy,
-.body_wrap #hard {
+  font-size: 4rem;
   background-color: lightsalmon;
   color: white;
-  font-size: 4rem;
   padding: 2rem 5rem;
   border-radius: 6rem;
-  position: relative;
-  top: 40%;
-  transform: translate(0, -40%);
 }
-.body_wrap #easy:not(#hard),
-.body_wrap #hard:not(#hard) {
-  margin-right: 5rem;
+
+#title {
+  font-family: "Rubik Puddles", cursive;
+  text-align: center;
+  font-size: 10rem;
+  color: lightsalmon;
 }
-.body_wrap #gameForm {
-  font-size: 4rem;
-  padding: 18rem 0;
+
+#gameForm {
+  padding: 15% 0;
 }
-.body_wrap #input_wrap {
+
+#input_wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  color: gray;
 }
-.body_wrap #input_wrap h3 {
+#input_wrap h3 {
   font-weight: normal;
   font-size: 3.5rem;
 }
-.body_wrap #input_wrap h3 span {
+#input_wrap h3 span {
   float: right;
 }
-.body_wrap #input_wrap #Up span {
+#input_wrap #Up span {
   float: left;
 }
-.body_wrap #guessForm input {
+#input_wrap #guessForm input {
   all: unset;
   border-bottom: 2px solid gray;
   text-align: center;
   width: 20rem;
   padding-bottom: 1.5rem;
   color: black;
-}
-.body_wrap #guessForm button {
   font-size: 3rem;
-  background-color: lightsalmon;
-  color: white;
-  padding: 1rem;
-  border-radius: 0.8rem;
 }
-.body_wrap #result_wrap {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-}
-.body_wrap #result {
-  font-size: 8rem;
-  color: black;
-}
-.body_wrap #retry {
-  font-size: 4rem;
-  background-color: lightsalmon;
-  color: white;
-  padding: 2rem 3rem;
-  border-radius: 6rem;
-  margin: 10rem auto;
+#input_wrap #guessForm button {
+  margin-left: 0.5rem;
+  font-size: 3rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
 }
 
-/* @media (max-width: ) {
-} */
-/* @media (max-width: 1023px) {
-  .body_wrap {
-    width: 80%;
-    #gameForm {
-      padding: 12rem 0;
-    }
-    #result {
-      font-size: 6.5rem;
-    }
+#result_wrap #result {
+  font-size: 8rem;
+}
+#result_wrap #retry {
+  margin: 20% auto;
+}
+
+@media (max-width: 1280px) {
+  #input_wrap h3 {
+    font-size: 3rem;
+  }
+  #input_wrap #guessForm input {
+    width: 12rem;
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+  }
+  #input_wrap #guessForm button {
+    margin-left: 0.5rem;
+    font-size: 2.2rem;
+    padding: 1rem;
   }
 }
-@media (max-width: 768px) {
-  .body_wrap {
-    width: 80%;
-    padding: 10rem 5rem;
-    #input_wrap {
-      justify-content: space-evenly;
-      input {
-        font-size: 3.5rem;
-      }
-      h3 {
-        font-size: 3rem;
-      }
-    }
-    #guessForm input {
-      width: 15rem;
-    }
-    #result {
-      font-size: 5rem;
-    }
-    #retry {
-      font-size: 3rem;
-    }
+@media (max-width: 1024px) {
+  #title {
+    font-size: 7rem;
+  }
+
+  #input_wrap h3 {
+    font-size: 2.5rem;
+  }
+  #input_wrap #guessForm input {
+    width: 7rem;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  #input_wrap #guessForm button {
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    padding: 1rem;
   }
 }
- */
+@media (max-width: 767px) {
+  #title {
+    font-size: 6rem;
+  }
+
+  .body_wrap .button {
+    font-size: 2.8rem;
+    padding: 1rem 3rem;
+  }
+
+  #input_wrap h3 {
+    font-size: 2rem;
+  }
+  #input_wrap #guessForm input {
+    width: 6rem;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  #input_wrap #guessForm button {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  #result_wrap #result {
+    font-size: 2.7rem;
+  }
+  #result_wrap #retry {
+    font-size: 2.2rem;
+    padding: 1rem 2rem;
+  }
+}
+@media (max-width: 393px) {
+  #title {
+    font-size: 5rem;
+  }
+
+  .body_wrap .button {
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+  }
+
+  #input_wrap h3 {
+    font-size: 1.5rem;
+  }
+  #input_wrap #guessForm input {
+    width: 6rem;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  #input_wrap #guessForm button {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  #result_wrap #result {
+    margin: 0 auto;
+    font-size: 2.4rem;
+  }
+  #result_wrap #retry {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+  }
+}
+@media (max-width: 280px) {
+  #title {
+    font-size: 4rem;
+  }
+
+  .body_wrap .button {
+    font-size: 2rem;
+    padding: 0.8rem 2rem;
+  }
+
+  #input_wrap h3 {
+    font-size: 1.2rem;
+  }
+  #input_wrap #guessForm input {
+    width: 4rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #input_wrap #guessForm button {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
