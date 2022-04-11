@@ -63,36 +63,36 @@ body {
   #gameForm {
     font-size: 4rem;
     padding: 18rem 0;
-    #input_wrap {
-      display: flex;
-      justify-content: space-between;
-      h3 {
-        font-weight: normal;
-        font-size: 3.5rem;
-        span {
-          float: right;
-        }
-      }
-      #Up span {
-        float: left;
+  }
+  #input_wrap {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-weight: normal;
+      font-size: 3.5rem;
+      span {
+        float: right;
       }
     }
-    #guessForm {
-      input {
-        all: unset;
-        border-bottom: 2px solid gray;
-        text-align: center;
-        width: 20rem;
-        padding-bottom: 1.5rem;
-        color: black;
-      }
-      button {
-        font-size: 3rem;
-        background-color: lightsalmon;
-        color: white;
-        padding: 1rem;
-        border-radius: 0.8rem;
-      }
+    #Up span {
+      float: left;
+    }
+  }
+  #guessForm {
+    input {
+      all: unset;
+      border-bottom: 2px solid gray;
+      text-align: center;
+      width: 20rem;
+      padding-bottom: 1.5rem;
+      color: black;
+    }
+    button {
+      font-size: 3rem;
+      background-color: lightsalmon;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.8rem;
     }
   }
   #result_wrap {
@@ -100,17 +100,53 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -60%);
+  }
+  #result {
+    font-size: 8rem;
+    color: black;
+  }
+  #retry {
+    font-size: 4rem;
+    background-color: lightsalmon;
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 6rem;
+    margin: 10rem auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .body_wrap {
+    width: 80rem;
+    #gameForm {
+      padding: 12rem 0;
+    }
     #result {
-      font-size: 8rem;
-      color: black;
+      font-size: 6.5rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .body_wrap {
+    width: 60rem;
+    padding: 10rem 5rem;
+    #input_wrap {
+      justify-content: space-evenly;
+      input {
+        font-size: 3.5rem;
+      }
+      h3 {
+        font-size: 3rem;
+      }
+    }
+    #guessForm input {
+      width: 15rem;
+    }
+    #result {
+      font-size: 5rem;
     }
     #retry {
-      font-size: 4rem;
-      background-color: lightsalmon;
-      color: white;
-      padding: 2rem 3rem;
-      border-radius: 3rem;
-      margin: 10rem auto;
+      font-size: 3rem;
     }
   }
 }

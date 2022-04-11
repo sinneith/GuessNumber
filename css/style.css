@@ -68,21 +68,21 @@ body input[type=number] {
   font-size: 4rem;
   padding: 18rem 0;
 }
-.body_wrap #gameForm #input_wrap {
+.body_wrap #input_wrap {
   display: flex;
   justify-content: space-between;
 }
-.body_wrap #gameForm #input_wrap h3 {
+.body_wrap #input_wrap h3 {
   font-weight: normal;
   font-size: 3.5rem;
 }
-.body_wrap #gameForm #input_wrap h3 span {
+.body_wrap #input_wrap h3 span {
   float: right;
 }
-.body_wrap #gameForm #input_wrap #Up span {
+.body_wrap #input_wrap #Up span {
   float: left;
 }
-.body_wrap #gameForm #guessForm input {
+.body_wrap #guessForm input {
   all: unset;
   border-bottom: 2px solid gray;
   text-align: center;
@@ -90,7 +90,7 @@ body input[type=number] {
   padding-bottom: 1.5rem;
   color: black;
 }
-.body_wrap #gameForm #guessForm button {
+.body_wrap #guessForm button {
   font-size: 3rem;
   background-color: lightsalmon;
   color: white;
@@ -103,17 +103,53 @@ body input[type=number] {
   left: 50%;
   transform: translate(-50%, -60%);
 }
-.body_wrap #result_wrap #result {
+.body_wrap #result {
   font-size: 8rem;
   color: black;
 }
-.body_wrap #result_wrap #retry {
+.body_wrap #retry {
   font-size: 4rem;
   background-color: lightsalmon;
   color: white;
   padding: 2rem 3rem;
-  border-radius: 3rem;
+  border-radius: 6rem;
   margin: 10rem auto;
+}
+
+@media (max-width: 1023px) {
+  .body_wrap {
+    width: 80rem;
+  }
+  .body_wrap #gameForm {
+    padding: 12rem 0;
+  }
+  .body_wrap #result {
+    font-size: 6.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .body_wrap {
+    width: 60rem;
+    padding: 10rem 5rem;
+  }
+  .body_wrap #input_wrap {
+    justify-content: space-evenly;
+  }
+  .body_wrap #input_wrap input {
+    font-size: 3.5rem;
+  }
+  .body_wrap #input_wrap h3 {
+    font-size: 3rem;
+  }
+  .body_wrap #guessForm input {
+    width: 15rem;
+  }
+  .body_wrap #result {
+    font-size: 5rem;
+  }
+  .body_wrap #retry {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
