@@ -1,4 +1,4 @@
-#Guess a Number!
+# Guess a Number!
 
 - 숫자 맞추기 게임입니다.
 - 반응형으로 제작되었습니다.
